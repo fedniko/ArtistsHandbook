@@ -82,7 +82,7 @@ class MyApp extends StatelessWidget {
               margin: EdgeInsets.fromLTRB(0, 0, 0, 30.0),
               alignment: Alignment.bottomCenter,
               child: Text(
-                "© 2021, Николай Чусовской",
+                "© 2021, fedniko",
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w400,

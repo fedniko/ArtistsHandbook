@@ -232,7 +232,9 @@ class HomePage extends StatelessWidget {
             Container(
                 height: 100,
                 child: DrawerHeader(
-                  decoration: BoxDecoration(color: Color(0xff9c763c),),
+                  decoration: BoxDecoration(
+                    color: Color(0xff9c763c),
+                  ),
                   padding: EdgeInsets.zero,
                   child: ListTile(
                     contentPadding: EdgeInsets.only(left: 15),
@@ -311,8 +313,7 @@ class HomePage extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 CupertinoPageRoute(
-                                    builder: (context) =>
-                                        AboutMeWidget()),
+                                    builder: (context) => AboutMeWidget()),
                               );
                             },
                           ),
@@ -458,212 +459,210 @@ Widget artistItem(BuildContext context, Artists artists) {
                             direction: Axis.vertical,
                             children: [
                               Expanded(
-                                child: ListView(
-                                  physics: ClampingScrollPhysics(),
-                                  shrinkWrap: true,
-                                  children: [
-                                    Image.asset(artists.mainPicture!),
-                                    SizedBox(
-                                      height: 20,
-                                    ),
-                                    Text(
-                                      artists.title!,
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 18,
+                                child: SingleChildScrollView(
+                                    physics: ClampingScrollPhysics(),
+                                    child: Column(children: [
+                                      Image.asset(artists.mainPicture!),
+                                      SizedBox(
+                                        height: 20,
                                       ),
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Text(
-                                      artists.description!,
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400),
-                                    ),
-                                    SizedBox(
-                                      height: 20,
-                                    ),
-                                    MarkdownBody(
-                                      data: artists.content!,
-                                      styleSheet: MarkdownStyleSheet(
-                                        p: TextStyle(
-                                          fontFamily: 'Stolzl',
+                                      Text(
+                                        artists.title!,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
                                           fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          height: 1.4,
+                                          fontSize: 18,
                                         ),
                                       ),
-                                    ),
-                                    SizedBox(
-                                      height: 30,
-                                    ),
-                                  ],
-                                ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Text(
+                                        artists.description!,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w400),
+                                      ),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      MarkdownBody(
+                                        data: artists.content!,
+                                        styleSheet: MarkdownStyleSheet(
+                                          p: TextStyle(
+                                            fontFamily: 'Stolzl',
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 14,
+                                            height: 1.4,
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 30,
+                                      ),
+                                    ])),
                               ),
                             ],
                           ),
                           Flex(direction: Axis.vertical, children: [
                             Expanded(
-                              child: ListView(
-                                physics: ClampingScrollPhysics(),
-                                shrinkWrap: true,
-                                children: [
-                                  Image.asset(artists.pic1!),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Text(
-                                    artists.text1!,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Image.asset(artists.pic2!),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Text(
-                                    artists.text2!,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Image.asset(artists.pic3!),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Text(
-                                    artists.text3!,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Image.asset(artists.pic4!),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Text(
-                                    artists.text4!,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Image.asset(artists.pic5!),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Text(
-                                    artists.text5!,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Image.asset(artists.pic6!),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Text(
-                                    artists.text6!,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Image.asset(artists.pic7!),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Text(
-                                    artists.text7!,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Image.asset(artists.pic8!),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Text(
-                                    artists.text8!,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Image.asset(artists.pic9!),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Text(
-                                    artists.text9!,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Image.asset(artists.pic10!),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Text(
-                                    artists.text10!,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                ],
-                              ),
+                              child: SingleChildScrollView(
+                                  physics: ClampingScrollPhysics(),
+                                  child: Column(
+                                    children: [
+                                      Image.asset(artists.pic1!),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Text(
+                                        artists.text1!,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Image.asset(artists.pic2!),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Text(
+                                        artists.text2!,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Image.asset(artists.pic3!),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Text(
+                                        artists.text3!,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Image.asset(artists.pic4!),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Text(
+                                        artists.text4!,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Image.asset(artists.pic5!),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Text(
+                                        artists.text5!,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Image.asset(artists.pic6!),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Text(
+                                        artists.text6!,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Image.asset(artists.pic7!),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Text(
+                                        artists.text7!,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Image.asset(artists.pic8!),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Text(
+                                        artists.text8!,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Image.asset(artists.pic9!),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Text(
+                                        artists.text9!,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Image.asset(artists.pic10!),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Text(
+                                        artists.text10!,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                    ],
+                                  )),
                             ),
                           ])
                         ]),
